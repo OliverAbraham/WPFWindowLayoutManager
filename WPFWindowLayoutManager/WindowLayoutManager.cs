@@ -10,9 +10,9 @@ namespace Abraham.WPFWindowLayoutManager
 {
 	/// <summary>
 	/// Nuget package to easily save and restore Window positions
-	/// The library can save all kinds of WPF Windows and Controls: Windows, GridViews, GridView column widths
+	/// The library can save attributes of WPF Windows and DataGrids (column widths, orders etc)
 	/// 
-	/// This package is hosted on github: 
+	/// This package is hosted on github at https://github.com/OliverAbraham/WPFWindowLayoutManager.
 	/// 
 	/// Oliver Abraham
 	/// www.oliver-abraham.de

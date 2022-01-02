@@ -5,7 +5,7 @@ namespace WindowLayoutManager_Demo
 {
 	/// <summary>
 	/// Demo app to demonstrate save and restore of the window size and position.
-	/// The library can save other kinds of WPF controls: DataGrids, DataGrid column widths etc.
+	/// The library can save attributes of WPF Windows and DataGrids (column widths, orders etc)
 	/// </summary>
 	public partial class MainWindow : Window
 	{

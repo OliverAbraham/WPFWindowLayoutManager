@@ -10,6 +10,11 @@ This library is a Nuget package to easily save and restore Window positions.
 The library can save attributes of WPF Windows and DataGrids (column widths, orders etc)
 
 
+## Source code
+
+The source code is hosted at https://github.com/OliverAbraham/WPFWindowLayoutManager.
+
+
 ## License
 
 Licensed under GPL v3 license.
@@ -19,7 +24,6 @@ https://www.gnu.org/licenses/gpl-3.0.en.html
 ## Compatibility
 
 The nuget package was build with DotNET 6.
-
 
 ## Example
 
