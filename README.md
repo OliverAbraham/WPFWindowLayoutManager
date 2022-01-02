@@ -7,8 +7,7 @@ mail@oliver-abraham.de
 ## Abstract
 
 This library is a Nuget package to easily save and restore Window positions.
-The library can save all kinds of WPF Windows and Controls: 
-Windows, GridViews, GridView column widths
+The library can save attributes of WPF Windows and DataGrids (column widths, orders etc)
 
 
 ## License
@@ -24,9 +23,9 @@ The nuget package was build with DotNET 6.
 
 ## Example
 
-For an example refer to project "WindowLayoutManager_Demo". 
-It demonstrates how to save the main window's size and position when it is closed by the user,
-and restore it when he opens it up again.
+For an example refer to project "WindowLayoutManager_Demo". It demonstrates:
+- how to save the main window's size and position when it is closed by the user,
+- and restore it when he opens it up again.
 
 
 ## Getting started
@@ -37,7 +36,7 @@ Add a field to your project:
 
 		private WindowLayoutManager _layoutManager;
 
-In the constructor of your MainWindow, add an initialization_
+In the constructor of your MainWindow, add an initialization:
 
 		_layoutManager = new WindowLayoutManager(window:this, key:"MainWindow");
 
@@ -55,3 +54,10 @@ You'll find a lot more methods to save and restore:
 - DataGrid column widths
 - DataGrid column ordering
 - DataGrid column sort direction
+
+
+### Restore the original states
+
+You can call the Reset method to delete the file that contains the layout information.
+Afterwards you should reinitialize your windows.
+
