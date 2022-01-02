@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.31911.260
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowLayoutManager_Demo", "WindowLayoutManager_Demo\WindowLayoutManager_Demo.csproj", "{F2B657EE-4ED5-4DE2-B8A2-49F5ED7CB53F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFWindowLayoutManager", "WPFWindowLayoutManager\WPFWindowLayoutManager.csproj", "{B8977719-DF52-49FE-93E2-2B5314453502}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abraham.WPFWindowLayoutManager", "WPFWindowLayoutManager\Abraham.WPFWindowLayoutManager.csproj", "{B8977719-DF52-49FE-93E2-2B5314453502}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{C76454EB-40DC-488D-9000-E4F737DC4D9D}"
 	ProjectSection(SolutionItems) = preProject

@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WPFWindowLayoutManager\WPFWindowLayoutManager.csproj" />
+    <ProjectReference Include="..\WPFWindowLayoutManager\Abraham.WPFWindowLayoutManager.csproj" />
   </ItemGroup>
 
 </Project>
