@@ -15,11 +15,17 @@
   </PropertyGroup>
 
 	<PropertyGroup>
-		<PackageLicenseFile>license-gpl-3.0.md</PackageLicenseFile>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<Version>1.0.1</Version>
+		<PackageIcon>Ciridata.png</PackageIcon>
+		<Title>WPF control and window positions manager</Title>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<None Include="license-gpl-3.0.md" Pack="true" PackagePath="" />
+		<None Include="..\..\Abraham.ProgramSettingsManager\ProgramSettingsManager\Ciridata.png">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -28,5 +34,12 @@
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
+
+	<ItemGroup>
+	  <None Update="LICENSE.txt">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 
 </Project>
