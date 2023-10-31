@@ -7,10 +7,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowLayoutManager_Demo", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abraham.WPFWindowLayoutManager", "WPFWindowLayoutManager\Abraham.WPFWindowLayoutManager.csproj", "{B8977719-DF52-49FE-93E2-2B5314453502}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{C76454EB-40DC-488D-9000-E4F737DC4D9D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 Solution items", "3 Solution items", "{C76454EB-40DC-488D-9000-E4F737DC4D9D}"
 	ProjectSection(SolutionItems) = preProject
+		Ciridata.ico = Ciridata.ico
+		Ciridata.png = Ciridata.png
+		LICENSE.txt = LICENSE.txt
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 Nuget package", "1 Nuget package", "{071F2D35-D451-45B4-AFF3-222215B56CBF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Demo", "2 Demo", "{51AC05BE-214D-432C-A0EC-822BB279391C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +36,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F2B657EE-4ED5-4DE2-B8A2-49F5ED7CB53F} = {51AC05BE-214D-432C-A0EC-822BB279391C}
+		{B8977719-DF52-49FE-93E2-2B5314453502} = {071F2D35-D451-45B4-AFF3-222215B56CBF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9755FE0A-D23C-426D-9966-2E908F5A67E7}

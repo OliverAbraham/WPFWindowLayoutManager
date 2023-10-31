@@ -16,13 +16,26 @@
 
 	<PropertyGroup>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-		<Version>1.0.1</Version>
 		<PackageIcon>Ciridata.png</PackageIcon>
 		<Title>WPF control and window positions manager</Title>
+		<Company>Oliver Abraham</Company>
+		<Version>1.0.2</Version>
+		<IncludeSymbols>True</IncludeSymbols>
+		<!-- Include symbol files (*.pdb) in the built .nupkg -->
+		<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+		<ApplicationIcon>Ciridata.ico</ApplicationIcon>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<None Include="..\..\Abraham.ProgramSettingsManager\ProgramSettingsManager\Ciridata.png">
+	  <Content Include="Ciridata.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\Ciridata.png">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\LICENSE.txt">
 		  <Pack>True</Pack>
 		  <PackagePath>\</PackagePath>
 		</None>

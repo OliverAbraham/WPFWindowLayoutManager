@@ -21,5 +21,12 @@ namespace WindowLayoutManager_Demo
 		{
 			_layoutManager.Save();
 		}
-	}
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+			var wnd = new ChildWindow();
+			wnd.LayoutManager = _layoutManager;
+			wnd.ShowDialog();
+        }
+    }
 }
