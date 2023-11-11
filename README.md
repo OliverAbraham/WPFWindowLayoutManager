@@ -1,6 +1,6 @@
 # Abraham.WPFWindowLayoutManager
 
-![](https://img.shields.io/github/downloads/oliverabraham/Abraham.WPFWindowLayoutManager/total) ![](https://img.shields.io/github/license/oliverabraham/Abraham.WPFWindowLayoutManager) ![](https://img.shields.io/github/languages/count/oliverabraham/Abraham.WPFWindowLayoutManager) ![GitHub Repo stars](https://img.shields.io/github/stars/oliverabraham/Abraham.WPFWindowLayoutManager?label=repo%20stars) ![GitHub Repo stars](https://img.shields.io/github/stars/oliverabraham?label=user%20stars)
+![](https://img.shields.io/github/downloads/oliverabraham/WPFWindowLayoutManager/total) ![](https://img.shields.io/github/license/oliverabraham/WPFWindowLayoutManager) ![](https://img.shields.io/github/languages/count/oliverabraham/WPFWindowLayoutManager) ![GitHub Repo stars](https://img.shields.io/github/stars/oliverabraham/WPFWindowLayoutManager?label=repo%20stars) ![GitHub Repo stars](https://img.shields.io/github/stars/oliverabraham?label=user%20stars)
 
 ## OVERVIEW
 
@@ -143,7 +143,7 @@ Please feel free to comment and suggest improvements!
 
 The source code is hosted at:
 
-https://github.com/OliverAbraham/Abraham.WPFWindowLayoutManager
+https://github.com/OliverAbraham/WPFWindowLayoutManager
 
 The Nuget Package is hosted at: 
 
