@@ -1,5 +1,7 @@
 # Abraham.WPFWindowLayoutManager
 
+![](https://img.shields.io/github/downloads/oliverabraham/Abraham.WPFWindowLayoutManager/total) ![](https://img.shields.io/github/license/oliverabraham/Abraham.WPFWindowLayoutManager) ![](https://img.shields.io/github/languages/count/oliverabraham/Abraham.WPFWindowLayoutManager) ![GitHub Repo stars](https://img.shields.io/github/stars/oliverabraham/Abraham.WPFWindowLayoutManager?label=repo%20stars) ![GitHub Repo stars](https://img.shields.io/github/stars/oliverabraham?label=user%20stars)
+
 ## OVERVIEW
 
 This library is a Nuget package to easily save and restore Window positions.
@@ -149,7 +151,11 @@ https://www.nuget.org/packages/Abraham.WPFWindowLayoutManager
 
 
 
-# MAKE A DONATION !
 
+## SCREENSHOTS
+
+# MAKE A DONATION !
 If you find this application useful, buy me a coffee!
 I would appreciate a small donation on https://www.buymeacoffee.com/oliverabraham
+
+<a href="https://www.buymeacoffee.com/app/oliverabraham" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
