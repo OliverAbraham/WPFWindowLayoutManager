@@ -24,6 +24,7 @@
 		<!-- Include symbol files (*.pdb) in the built .nupkg -->
 		<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
 		<ApplicationIcon>Ciridata.ico</ApplicationIcon>
+		<PackageReleaseNotes>Correct start position without jump, and maximizes on the same monitor as before.</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>
