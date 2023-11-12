@@ -5,6 +5,8 @@ using System.IO;
 using System.Windows.Controls;
 using System.Windows;
 using System.ComponentModel;
+using System.Timers;
+using System.Windows.Threading;
 
 namespace Abraham.WPFWindowLayoutManager
 {
@@ -29,9 +31,11 @@ namespace Abraham.WPFWindowLayoutManager
         private DTO _data;
         private string _filename;
         private Window _mainWindow;
+        private Dispatcher _dispatcher;
         private string _key;
         private bool _dataWasLoaded;
         private bool _disableAllSaving;
+        private Timer _maximizeTimer;
         private const string DEFAULT_FILENAME = "UI-Layout.xml";
 		#endregion
 
@@ -52,14 +56,16 @@ namespace Abraham.WPFWindowLayoutManager
             _filename = dateiname;
         }
 
-        public WindowLayoutManager(Window window, string key)
+        public WindowLayoutManager(Window window, string key, Dispatcher dispatcher)
         {
             _mainWindow = window;
+            _dispatcher = dispatcher;
+            _key = key;
+
             _mainWindow.WindowStartupLocation = WindowStartupLocation.Manual;
             _mainWindow.Loaded  += Window_Loaded;
             _mainWindow.Closing += Window_Closing;
             _mainWindow.Closed  += Window_Closed;
-            _key = key;
             _data = new DTO();
             _filename = Environment.CurrentDirectory + Path.DirectorySeparatorChar + DEFAULT_FILENAME;
 
@@ -135,18 +141,30 @@ namespace Abraham.WPFWindowLayoutManager
             ctl.Width  = e.Width;
             ctl.Height = e.Height;
             if (e.State == "Maximized")
-                ctl.WindowState = WindowState.Maximized;
+            {
+                if (key == "MainWindow")
+                    WaitAndThenMaximize();
+                else
+                    ctl.WindowState = WindowState.Maximized;
+            }
             else if (e.State == "Minimized")
+            {
                 ctl.WindowState = WindowState.Minimized;
+            }
         }
 
-		public void RestoreWindowPosition(Window ctl, string key = "MainWindow")
+        public void RestoreWindowPosition(Window ctl, string key = "MainWindow")
         {
             LayoutElement e = FindElement(key);
             if (e == null)
                 return;
             ctl.Left   = e.Left;
             ctl.Top    = e.Top;
+        }
+
+        public void RemoveWindowBorder(Window ctl)
+        {
+            ctl.WindowStyle = WindowStyle.SingleBorderWindow;
         }
         #endregion
         #region ------------ Single values ------------------------------------
@@ -441,6 +459,24 @@ namespace Abraham.WPFWindowLayoutManager
                     return element;
             }
             return null;
+        }
+
+        private void WaitAndThenMaximize()
+        {
+            _maximizeTimer = new Timer();
+            _maximizeTimer.Interval = 100;
+            _maximizeTimer.Elapsed += MaximizeWindow;
+            _maximizeTimer.AutoReset = false;
+            _maximizeTimer.Start();
+        }
+
+        private void MaximizeWindow(object? sender, ElapsedEventArgs e)
+        {
+            _maximizeTimer.Stop();
+            _dispatcher.Invoke(() =>
+            {
+                _mainWindow.WindowState = WindowState.Maximized;
+            });
         }
         #endregion
     }

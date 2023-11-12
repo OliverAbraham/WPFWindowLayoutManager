@@ -14,7 +14,7 @@ namespace WindowLayoutManager_Demo
 		public MainWindow()
 		{
 			InitializeComponent();
-			_layoutManager = new WindowLayoutManager(window:this, key:"MainWindow");
+			_layoutManager = new WindowLayoutManager(window:this, key:"MainWindow", Dispatcher);
 			_layoutManager.RestoreWindowPosition(this);
 		}
 
