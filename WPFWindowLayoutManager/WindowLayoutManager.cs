@@ -55,20 +55,25 @@ namespace Abraham.WPFWindowLayoutManager
         public WindowLayoutManager(Window window, string key)
         {
             _mainWindow = window;
+            _mainWindow.WindowStartupLocation = WindowStartupLocation.Manual;
             _mainWindow.Loaded  += Window_Loaded;
             _mainWindow.Closing += Window_Closing;
             _mainWindow.Closed  += Window_Closed;
             _key = key;
             _data = new DTO();
             _filename = Environment.CurrentDirectory + Path.DirectorySeparatorChar + DEFAULT_FILENAME;
+
+            Load();
+            if (_dataWasLoaded)
+                RestoreSizeAndPosition(_mainWindow, _key);
         }
         #endregion
 
 
 
-		#region ------------ Methods --------------------------------------------------------------
-		#region ------------ Persistence --------------------------------------
-		public void Save()
+        #region ------------ Methods --------------------------------------------------------------
+        #region ------------ Persistence --------------------------------------
+        public void Save()
 		{
             if (_disableAllSaving)
                 return;
@@ -303,6 +308,7 @@ namespace Abraham.WPFWindowLayoutManager
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            System.Diagnostics.Debug.WriteLine($"SaveSizeAndPosition: {_mainWindow.Left} {_mainWindow.Top} {_mainWindow.Width} {_mainWindow.Height}  {_mainWindow.WindowState}");
             SaveSizeAndPosition(_mainWindow, _key);
         }
 

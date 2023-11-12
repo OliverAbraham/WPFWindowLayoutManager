@@ -13,13 +13,9 @@ namespace WindowLayoutManager_Demo
 
 		public MainWindow()
 		{
-			_layoutManager = new WindowLayoutManager(window:this, key:"MainWindow");
 			InitializeComponent();
-		}
-
-		private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-		{
-			_layoutManager.Save();
+			_layoutManager = new WindowLayoutManager(window:this, key:"MainWindow");
+			_layoutManager.RestoreWindowPosition(this);
 		}
 
         private void Button_Click(object sender, RoutedEventArgs e)

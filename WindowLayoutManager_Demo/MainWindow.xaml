@@ -5,8 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindowLayoutManager_Demo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="207" Width="465" FontSize="16" Background="FloralWhite"
-        Closing="Window_Closing">
+        Title="MainWindow" Height="227" Width="465" FontSize="16" Background="FloralWhite">
     <Grid>
         <Label Content="Drag this window somewhere, change its size." 
                Margin="74,44,0,0" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="458"></Label>
