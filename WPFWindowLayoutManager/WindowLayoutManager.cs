@@ -77,7 +77,7 @@ namespace Abraham.WPFWindowLayoutManager
 
 
 
-        #region ------------ Methods --------------------------------------------------------------
+        #region ------------- Methods -------------------------------------------------------------
         #region ------------ Persistence --------------------------------------
         public void Save()
 		{
@@ -165,6 +165,69 @@ namespace Abraham.WPFWindowLayoutManager
         public void RemoveWindowBorder(Window ctl)
         {
             ctl.WindowStyle = WindowStyle.SingleBorderWindow;
+        }
+        #endregion
+        #region ------------ Controls -----------------------------------------
+        public void SaveControls(List<Control> controls, string key)
+        {
+            for (int i = 0; i < controls.Count; i++)
+            {
+                var individualKey = $"{key}_{i}";
+
+                if (controls[i] is TextBox     textBox    ) SaveTextBox    (textBox    , individualKey);
+                if (controls[i] is CheckBox    checkBox   ) SaveCheckBox   (checkBox   , individualKey);
+                if (controls[i] is RadioButton radiobutton) SaveRadiobutton(radiobutton, individualKey);
+            }
+        }
+
+        public void RestoreControls(List<Control> controls, string key)
+        {
+            for (int i = 0; i < controls.Count; i++)
+            {
+                var individualKey = $"{key}_{i}";
+
+                if (controls[i] is TextBox     textBox    ) RestoreTextBox    (textBox    , individualKey);
+                if (controls[i] is CheckBox    checkBox   ) RestoreCheckBox   (checkBox   , individualKey);
+                if (controls[i] is RadioButton radiobutton) RestoreRadiobutton(radiobutton, individualKey);
+            }
+        }
+
+        public void SaveTextBox(TextBox control, string key)
+        {
+            SaveTextValue(control.Text, key);
+        }
+
+        public void RestoreTextBox(TextBox control, string key)
+        {
+            var value = GetTextValue(key);
+            if (!string.IsNullOrWhiteSpace(value))
+                control.Text = value;
+        }
+
+        public void SaveCheckBox(CheckBox control, string key)
+        {
+            var value = control.IsChecked == true ? "1" : "0";
+            SaveTextValue(value, key);
+        }
+
+        public void RestoreCheckBox(CheckBox control, string key)
+        {
+            var value = GetTextValue(key);
+            if (!string.IsNullOrWhiteSpace(value))
+                control.IsChecked = (value == "1");
+        }
+
+        public void SaveRadiobutton(RadioButton control, string key)
+        {
+            var value = control.IsChecked == true ? "1" : "0";
+            SaveTextValue(value, key);
+        }
+
+        public void RestoreRadiobutton(RadioButton control, string key)
+        {
+            var value = GetTextValue(key);
+            if (!string.IsNullOrWhiteSpace(value))
+                control.IsChecked = (value == "1");
         }
         #endregion
         #region ------------ Single values ------------------------------------

@@ -19,12 +19,12 @@
 		<PackageIcon>Ciridata.png</PackageIcon>
 		<Title>WPF control and window positions manager</Title>
 		<Company>Oliver Abraham</Company>
-		<Version>1.0.4</Version>
+		<Version>1.0.5</Version>
 		<IncludeSymbols>True</IncludeSymbols>
 		<!-- Include symbol files (*.pdb) in the built .nupkg -->
 		<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
 		<ApplicationIcon>Ciridata.ico</ApplicationIcon>
-		<PackageReleaseNotes>Correct start position without jump, and maximizes on the same monitor as before.</PackageReleaseNotes>
+		<PackageReleaseNotes>Added methods to store TextBoxes, Checkboxes, Radiobuttons</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>
